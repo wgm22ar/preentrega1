@@ -4,7 +4,7 @@ class ProductManager {
   }
   static id = 0;
 
-  addProducts(title, description, price, image, stock) {
+  addProducts(title, description, price, image, stock, codigo) {
     ProductManager.id++;
     this.products.push({
       title,
@@ -12,6 +12,7 @@ class ProductManager {
       price,
       image,
       stock,
+      codigo,
       id: ProductManager.id,
     });
   }
@@ -31,9 +32,30 @@ class ProductManager {
 
 const productos = new ProductManager();
 
-productos.addProducts("Art1", "Descripcion1", 100, "imagenPrueba1", 5);
-productos.addProducts("Art2", "Descripcion2", 200, "imagenPrueba2", 100);
-productos.addProducts("Art3", "Descripcion3", 300, "imagenPrueba3", 25);
+productos.addProducts(
+  "Art1",
+  "Descripcion1",
+  100,
+  "imagenPrueba1",
+  5,
+  "Item ABC1"
+);
+productos.addProducts(
+  "Art2",
+  "Descripcion2",
+  200,
+  "imagenPrueba2",
+  100,
+  "Item ABC2"
+);
+productos.addProducts(
+  "Art3",
+  "Descripcion3",
+  300,
+  "imagenPrueba3",
+  25,
+  "Item ABC3"
+);
 
 console.log(productos.getProduct());
 productos.getProductById(3);
