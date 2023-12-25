@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "name": "pre-entregas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "undici-types": "^6.2.1"
+  }
+}
